@@ -1,0 +1,10 @@
+
+hidden partial modifier_keys
+xkb_symbols "escape_shifted_capslock" {
+    key <CAPS> {
+        type[Group1] = "TWO_LEVEL",
+        symbols[Group1] = [ Control_L, Caps_Lock ],
+        actions[Group1] = [ SetMods(modifiers = Control), LockMods(modifiers = Lock) ]
+    };
+};
+
