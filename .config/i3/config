@@ -33,9 +33,6 @@ font pango:monospace 10
 exec --no-startup-id dex --autostart --environment i3
 
 
-# Set US international keyboard layout
-exec sexkbmap -layout us -variant altgr-intl
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
