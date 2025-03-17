@@ -129,3 +129,5 @@ export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 
+# added by Snowflake SnowSQL installer
+export PATH=/home/emil/bin:$PATH
