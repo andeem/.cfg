@@ -116,8 +116,10 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=/home/emil/.cfg/ --work-tree=/home/emil'
-alias tlw='tmuxifier load-window'
-alias tls='tmuxifier load-session'
+if type 'tmuxifier' &> /dev/null; then
+  alias tlw='tmuxifier load-window'
+  alias tls='tmuxifier load-session'
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
