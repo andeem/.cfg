@@ -2,7 +2,7 @@ general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
   # Example: The below command launches Zebar.
-  startup_commands: ['shell-exec zebar', 'focus --workspace 3', 'shell-exec wt -p "Ubuntu" wsl.exe -e "zsh" "./.todo_session.sh"']
+  startup_commands: ['shell-exec zebar', 'focus --workspace 9', 'shell-exec wt -p "Ubuntu" wsl.exe -e "zsh" "./.todo_session.sh"']
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
@@ -121,32 +121,32 @@ window_behavior:
 
 workspaces:
   - name: '1'
-    display_name: "Chat"
-    bind_to_monitor: 0
-  - name: '2'
-    display_name: "Mail"
-    bind_to_monitor: 0
-  - name: '3'
-    display_name: "Todo"
-    bind_to_monitor: 0
-  - name: '4'
     display_name: "Work"
     bind_to_monitor: 1
-  - name: '5'
+  - name: '2'
     display_name: "Browser"
     bind_to_monitor: 1
-  - name: '6'
+  - name: '3'
     display_name: "Other"
     bind_to_monitor: 1
+  - name: '4'
+    display_name: "Ad hoc"
+    bind_to_monitor: 1
+  - name: '5'
+    display_name: "Ad hoc"
+    bind_to_monitor: 1
+  - name: '6'
+    display_name: "Ad hoc"
+    bind_to_monitor: 1
   - name: '7'
-    display_name: "Ad hoc"
-    bind_to_monitor: 1
+    display_name: "Chat"
+    bind_to_monitor: 0
   - name: '8'
-    display_name: "Ad hoc"
-    bind_to_monitor: 1
+    display_name: "Mail"
+    bind_to_monitor: 0
   - name: '9'
-    display_name: "Ad hoc"
-    bind_to_monitor: 1
+    display_name: "Todo"
+    bind_to_monitor: 0
 
 window_rules:
   - commands: [set-floating --centered]
@@ -155,13 +155,13 @@ window_rules:
       - window_process: { equals: 'tableau' }
         window_title: { equals: 'Processing Request' }
 
-  - commands: ['move --workspace 1']
+  - commands: ['move --workspace 7']
     match:
       - window_title: { regex: 'Rocket.Chat' }
       - window_process: { equals: 'ms-teams' }
 
 
-  - commands: ['move --workspace 2']
+  - commands: ['move --workspace 8']
     match:
       - window_process: { regex: 'OUTLOOK' }
 
