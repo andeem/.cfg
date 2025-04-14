@@ -116,6 +116,8 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=/home/emil/.cfg/ --work-tree=/home/emil'
+export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
+export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 if type 'tmuxifier' &> /dev/null; then
   eval "$(tmuxifier init -)"
   alias tlw='tmuxifier load-window'
@@ -128,8 +130,6 @@ export NVM_DIR="$HOME/.nvm"
 export REQUESTS_CA_BUNDLE='/etc/ssl/certs/ca-certificates.crt'
 export AWS_CA_BUNDLE='/etc/ssl/certs/ca-certificates.crt'
 
-export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
-export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 
 # added by Snowflake SnowSQL installer
 export PATH=/home/emil/bin:$PATH
