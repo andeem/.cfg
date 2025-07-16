@@ -9,13 +9,16 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 # Set displays, external as primary
-exec --no-startup-id xrandr --output HDMI-1 --auto --primary --right-of eDP-1
+exec --no-startup-id xrandr --output HDMI-1-1 --auto --primary --right-of eDP-1-1
 
 # Set background
 exec --no-startup-id ~/.fehbg &
 
 # Start picom (compositor, used to achieve transparent windows)
 exec --no-startup-id picom -b --backend glx --xrender-sync-fence
+
+# Set correct ICC profile
+exec --no-startup-id dispwin -d1 .var/app/net.displaycal.DisplayCAL/data/DisplayCAL/storage/DELL\ 2408\ \#1\ 2025-05-24\ 13-53\ D6500\ 2.2\ F-S\ XYZLUT+MTX/DELL\ 2408\ \#1\ 2025-05-24\ 13-53\ D6500\ 2.2\ F-S\ XYZLUT+MTX.icc
 
 
 set $mod Mod1
